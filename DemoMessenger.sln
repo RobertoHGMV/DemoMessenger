@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMessenger.Api", "src\DemoMessenger.Api\DemoMessenger.Api.csproj", "{667C2A7D-7E7F-482C-8A62-EBC5E809B81E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{667C2A7D-7E7F-482C-8A62-EBC5E809B81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667C2A7D-7E7F-482C-8A62-EBC5E809B81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667C2A7D-7E7F-482C-8A62-EBC5E809B81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667C2A7D-7E7F-482C-8A62-EBC5E809B81E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A462B492-997B-4B1C-91D5-A45E89511477}
+	EndGlobalSection
+EndGlobal
