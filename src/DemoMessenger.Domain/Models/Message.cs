@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DemoMessenger.Api.Models
+namespace DemoMessenger.Domain.Models
 {
     public class Message
     {

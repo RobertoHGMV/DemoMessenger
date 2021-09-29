@@ -1,6 +1,7 @@
-using DemoMessenger.Api.Consumers;
+using DemoMessenger.Api.MassTransit.Consumers;
 using DemoMessenger.Domain.Configurations;
 using DemoMessenger.Domain.Services;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DemoMessenger.Api
+namespace DemoMessenger.Api.MassTransit
 {
     public class Startup
     {
@@ -39,6 +40,21 @@ namespace DemoMessenger.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mensageria", Version = "v1" });
             });
+
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+                {
+                    config.UseHealthCheck(provider);
+                    config.Host(new Uri("rabbitmq://localhost"), h => 
+                    {
+                        h.Username("guest");
+                        h.Password("guest");
+                    });
+                }));
+            });
+
+            services.AddMassTransitHostedService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

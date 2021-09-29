@@ -1,4 +1,4 @@
-﻿namespace DemoMessenger.Api.Configurations
+﻿namespace DemoMessenger.Domain.Configurations
 {
     public class RabbitMqConfiguration
     {

@@ -1,4 +1,4 @@
-﻿namespace DemoMessenger.Api.Services
+﻿namespace DemoMessenger.Domain.Services
 {
     public interface INotificationService
     {

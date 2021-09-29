@@ -11,5 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DemoMessenger.Domain\DemoMessenger.Domain.csproj" />
+  </ItemGroup>
+
 
 </Project>
