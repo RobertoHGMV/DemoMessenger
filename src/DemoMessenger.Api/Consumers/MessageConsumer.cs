@@ -20,9 +20,9 @@ namespace DemoMessenger.Api.Consumers
         private readonly IConnection _connection;
         private readonly IModel _channel;
 
-        private readonly RabbitMqConfiguration _configuration;
+        private readonly RabbitMqConfig _configuration;
 
-        public MessageConsumer(IOptions<RabbitMqConfiguration> option, IServiceProvider serviceProvider)
+        public MessageConsumer(IOptions<RabbitMqConfig> option, IServiceProvider serviceProvider)
         {
             _configuration = option.Value;
             _serviceProvider = serviceProvider;

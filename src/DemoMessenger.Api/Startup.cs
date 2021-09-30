@@ -29,7 +29,7 @@ namespace DemoMessenger.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMqConfig"));
+            services.Configure<RabbitMqConfig>(Configuration.GetSection("RabbitMqConfig"));
             services.AddScoped<INotificationService, NotificationService>();
 
             services.AddHostedService<MessageConsumer>();

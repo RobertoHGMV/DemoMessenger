@@ -1,10 +1,12 @@
-﻿namespace DemoMessenger.Domain.Services
+﻿using System.Threading.Tasks;
+
+namespace DemoMessenger.Domain.Services
 {
     public class NotificationService : INotificationService
     {
-        public void NotifyUser(int fromId, int toId, string content)
+        public async Task NotifyUser(int fromId, int toId, string content)
         {
-
+            await Task.FromResult(true);
         }
     }
 }

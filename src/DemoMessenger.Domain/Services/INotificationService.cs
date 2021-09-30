@@ -1,7 +1,9 @@
-﻿namespace DemoMessenger.Domain.Services
+﻿using System.Threading.Tasks;
+
+namespace DemoMessenger.Domain.Services
 {
     public interface INotificationService
     {
-        void NotifyUser(int fromId, int toId, string content);
+        Task NotifyUser(int fromId, int toId, string content);
     }
 }
