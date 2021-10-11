@@ -43,8 +43,8 @@ namespace DemoMessenger.Api.MassTransit
                     //config.UseHealthCheck(provider);
                     config.Host(new Uri("rabbitmq://localhost"), h =>
                     {
-                        h.Username("guest");
-                        h.Password("guest");
+                        h.Username("admin");
+                        h.Password("admin@2021");
                     });
 
                     config.ReceiveEndpoint("orderMessageQueue", ep =>
